@@ -185,7 +185,13 @@ function getLastCarInfo(array) {
 */
 function getCarInfoById(array, id) {
     /* code here */
-    const car = array.find(item => item.id == id);
+    //const car = array.find(item => item.id == id);
+    let car = [];
+    for(let i=0; i<array.length; i++) {
+        if(array[i].id === id) {
+            car = array[i];
+        }
+    }
     return `This is a ${car.car_make} ${car.car_model}`;
 }
 
